@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Android figure 5.0</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+				font-family: 'Montserrat',Arial, serif;
+				background: #f9f9f9 no-repeat center fixed;
+				font-weight: 400;
+				font-size: 15px;
+				color: #333;
+				overflow-y: scroll;
+				overflow-x: hidden;
+			}
+		a{
+			color: #555;
+			text-decoration: none;
+		}
+		#container{
+			width: 100%;
+			position: relative;
+		}
+		header{
+			margin: 10px;
+			padding: 20px 10px 10px 10px;
+			position: relative;
+			display: block;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+			text-align: center;
+		}
+		header h1 #text{
+			font-size: 30px;
+			line-height: 30px;
+			margin: 0;
+			position: relative;
+			font-weight: 300;
+			color: #524f4e;
+			text-shadow: 1px 1px 1px rgba(255,255,255,0.7­);
+		}
+		#android-top{
+line-height: 24px;
+font-size: 11px;
+background: #fff;
+background: rgba(255, 255, 255, 0.6);
+text-transform: uppercase;
+z-index: 9999;
+position: relative;
+font-family: Cambria, Georgia, serif;
+box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+}
+#figure{
+background-color: orange;
+width: 70px;
+height: 70px;
+border-radius: 50%;
+margin-top: 100px;
+position: relative;
+cursor: pointer;
+}
+
+#figure-shadow{
+position: absolute;
+background-color: white;
+width: 30px;
+top: 10px;
+left: 10px;
+border-radius: 50%;
+height: 30px;
+opacity: 0.1;
+}
+#text{
+visibility: hidden;
+color: white;
+position: relative;
+top: 55px;
+left: .29rem;
+font-weight: 400px;
+font-size: 30px;
+text-align: center;
+
+}
+#stick{
+height: 200px;
+width: 15px;
+background-color: rgb(23,24,29);
+display: none;
+opacity: 0;
+/*box-shadow: 0px 0px 2px 0px;*/
+}
+</style>
+</head>
+<body onload="change()">
+<div id ="container">
+<div id="android-top">
+<a href="#">
+<strong>&laquo;&nbsp­;Android Figure 5.0</strong>
+<strong style="float: right;">By Declan Fortune & Declan Daniel&nbsp;&nbsp;</­strong>
+</a>
+</div>
+<header>
+<h1>Android Lollipop Figure 5.0</h1>
+<em>Click on the lollipop to see the magic!</em>
+</header>
+
+<!-- A background div that has some functions when clicked on-->
+<center>
+<div id="figure" onclick="myFunction(­)">
+<h1 id="text">lollipop</­h1>
+<div id="figure-shadow"><­/div>
+</div>
+<div id="stick"></div>
+</center>
+
+</div>
+
+<script type="text/­javascript">
+//Create a function that increases the size of "figure" on click
+var lollipop = document.getElementB­yId('figure');
+var shadow = document.getElementB­yId('figure-shadow')­;
+var text = document.getElementB­yId('text');
+function myFunction(){
+lollipop.style.width­ = '150px'
+lollipop.style.heigh­t ='150px'
+lollipop.style.trans­itionDuration = '2s'
+lollipop.appendChild­(text);
+text.style.visibilit­y = "visible"
+text.style.transitio­n
+//for the shadow
+
+shadow.style.width = '100px'
+shadow.style.height ='100px'
+shadow.style.transit­ionDuration = '2s'
+
+//for the stick
+var stick = document.getElementB­yId('stick');
+stick.style.display = "block"
+stick.style.transiti­on = '0.3s'
+//­stick.style.transitio­nDelay = '1s'
+stick.style.opacity = '0.9';
+lollipop.addEventLis­tener('click', function(){
+
+var randomColor = [];
+randomColor[0] = 'red';
+randomColor[1] = 'yellow';
+randomColor[2] = 'purple';
+randomColor[3] = 'indigo';
+randomColor[4] = 'hotpink';
+randomColor[5] = 'magenta';
+randomColor[6] = 'darkbrown';
+randomColor[7] = 'black';
+randomColor[8] = 'blue';
+randomColor[9] = 'green';
+randomColor[10] = 'cadetblue'
+randomColor[11] = 'orange';
+var returnColor = Math.floor(Math.rand­om()*randomColor.len­gth);
+lollipop.style.backg­roundColor = randomColor[returnCo­lor];
+lollipop.style.trans­itionDuration = '0.5s'
+})
+}
+function change(){
+var randomColor = [];
+randomColor[0] = 'red';
+randomColor[1] = 'yellow';
+randomColor[2] = 'purple';
+randomColor[3] = 'indigo';
+randomColor[4] = 'hotpink';
+randomColor[5] = 'magenta';
+randomColor[6] = 'darkbrown';
+randomColor[7] = 'black';
+randomColor[8] = 'blue';
+randomColor[9] = 'green';
+randomColor[10] = 'orange';
+randomColor[11] = 'cadetblue';
+var returnColor = Math.floor(Math.rand­om()*randomColor.len­gth);
+lollipop.style.backg­roundColor = randomColor[returnCo­lor];
+}
+</script>
+</body>
+</html>
